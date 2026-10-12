@@ -48,13 +48,19 @@ div.apDiv1 {
 
 div.apDiv2 {
 	position:absolute;
-	left: 25%;
+	left: min(25%, 40%);
 	top: 4%;
+	max-width: 100%;height: auto;
   white-space: nowrap;
   padding: 40px;
 }
 
 img {
+	padding: 10px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+video {
 	padding: 10px;
     overflow-clip-margin: content-box;
     overflow: clip;
@@ -67,4 +73,24 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
+	}
+
+@media (max-width: 600px) {
+div.apDiv2 {
+	position: relative;
+	left: 80%;
+	}
+}
+@media (max-width: 600px) {
+div.apDiv1 {
+	font-size: 4vw;
+}
+}
+@media (max-width: 1200px) {
+div.apDiv2 {
+	left: 50%;
+  	} 
+  } 
+video {
+	top: 5%;
 	}
